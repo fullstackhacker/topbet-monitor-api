@@ -1,0 +1,23 @@
+{
+  "name": "topbet-monitor-api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": ". ../../scripts/monitor_dev_env.sh && nodemon server.js",
+    "start": ". ../../scripts/monitor_prod_env.sh && node server.js",
+    "shell": ". ../../scripts/monitor_dev_env.sh && node",
+    "deploy": "ssh mush < deploy.sh"
+  },
+  "dependencies": {
+    "body-parser": "~1.8.1",
+    "cookie-parser": "~1.3.3",
+    "express": "~4.9.0",
+    "lodash": "^4.17.3",
+    "morgan": "~1.7.0",
+    "redis": "^2.6.5",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
