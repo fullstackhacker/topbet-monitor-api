@@ -6,6 +6,7 @@
     "dev": ". ../../scripts/monitor_dev_env.sh && nodemon server.js",
     "start": ". ../../scripts/monitor_prod_env.sh && node server.js",
     "shell": ". ../../scripts/monitor_dev_env.sh && node",
+    "tests": ". ../../scripts/monitor_test_env.sh && tape tests/* | tap-spec",
     "deploy": "ssh mush < deploy.sh"
   },
   "dependencies": {
@@ -18,6 +19,9 @@
     "request": "^2.79.0"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "supertest": "^3.0.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
   }
 }
