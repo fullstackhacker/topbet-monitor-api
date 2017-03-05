@@ -3,7 +3,7 @@
 const redis = require('redis');
 
 const redisConnectionOptions = {
-  db: 1
+  db: process.env.REDIS_DB
 };
 
 const redisClient = redis.createClient(redisConnectionOptions);
